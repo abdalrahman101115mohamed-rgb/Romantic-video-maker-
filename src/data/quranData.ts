@@ -1,0 +1,207 @@
+import { QuranVerse, AudioTrack } from '../types';
+
+export interface QuranBackground {
+  id: string;
+  name: string;
+  description: string;
+  imageUrl: string;
+  filter: 'cinematic_mood' | 'golden_hour' | 'warm_vintage' | 'none';
+  suggestedEffect: 'golden_dust' | 'rain' | 'sparkles' | 'none';
+}
+
+export const QURAN_BACKGROUNDS: QuranBackground[] = [
+  {
+    id: 'kaaba_dusk',
+    name: 'الكعبة المشرفة ومكة في الغسق',
+    description: 'أجواء الطواف المهيبة وروحانية البيت الحرام بنفحات إيمانية',
+    imageUrl: '/src/assets/images/quran_holy_kaaba_dusk_1793536354352.jpg',
+    filter: 'golden_hour',
+    suggestedEffect: 'golden_dust',
+  },
+  {
+    id: 'prophet_mosque_madinah',
+    name: 'المسجد النبوي الشريف بالمدينة',
+    description: 'القبة الخضراء والمآذن المضيئة بنور السكينة وطمأنينة النفس',
+    imageUrl: '/src/assets/images/quran_prophet_mosque_madinah_1793538084160.jpg',
+    filter: 'golden_hour',
+    suggestedEffect: 'golden_dust',
+  },
+  {
+    id: 'holy_mushaf_lantern',
+    name: 'المصحف الشريف ونور الفوانيس',
+    description: 'المصحف المفتوح على حامل خشبي عتيق ونور الإيمان والشموع',
+    imageUrl: '/src/assets/images/quran_holy_mushaf_lantern_1793538083751.jpg',
+    filter: 'warm_vintage',
+    suggestedEffect: 'golden_dust',
+  },
+  {
+    id: 'clouds_dawn',
+    name: 'أشعة الفجر وسكينة السحاب',
+    description: 'سماء فجرية متلألئة بنور الشمس وأشعتها الصافية بين السحب',
+    imageUrl: '/src/assets/images/quran_peaceful_clouds_sky_1793536353845.jpg',
+    filter: 'none',
+    suggestedEffect: 'sparkles',
+  },
+  {
+    id: 'night_stars_quran',
+    name: 'سماء الليل وعظمة الكون',
+    description: 'نجوم السماء المتلألئة وتأمل في ملكوت الخالق جل وعلا',
+    imageUrl: 'https://images.unsplash.com/photo-1506703719100-a0f3a48c0f86?auto=format&fit=crop&w=1080&q=80',
+    filter: 'cinematic_mood',
+    suggestedEffect: 'golden_dust',
+  },
+  {
+    id: 'peaceful_nature_rain',
+    name: 'رذاذ المطر والسكينة الخضراء',
+    description: 'قطرات الماء على الطبيعة الغناء مع تلاوة هادئة تخاطب الروح',
+    imageUrl: 'https://images.unsplash.com/photo-1428592953211-077101b2021b?auto=format&fit=crop&w=1080&q=80',
+    filter: 'cinematic_mood',
+    suggestedEffect: 'rain',
+  },
+];
+
+export const QURAN_VERSES: QuranVerse[] = [
+  {
+    id: 'surah_ash_sharh_full',
+    surahNumber: 94,
+    surahName: 'سورة الشرح (كاملة)',
+    ayahRange: 'الآيات ١ - ٨',
+    textUthmani: 'أَلَمْ نَشْرَحْ لَكَ صَدْرَكَ ۝ وَوَضَعْنَا عَنكَ وِزْرَكَ ۝ الَّذِي أَنقَضَ ظَهْرَكَ ۝ وَرَفَعْنَا لَكَ ذِكْرَكَ ۝ فَإِنَّ مَعَ الْعُسْرِ يُسْرًا ۝ إِنَّ مَعَ الْعُسْرِ يُسْرًا ۝ فَإِذَا فَرَغْتَ فَانصَبْ ۝ وَإِلَىٰ رَبِّكَ فَارْغَبْ',
+    translationOrTafseer: 'تلاوة كاملة لسورة الشرح: بشارة وتيسير العسير وانشراح الصدر',
+    reciterName: 'الشيخ مشاري راشد العفاسي',
+    themeTag: 'سورة الشرح كاملة',
+    recommendedDuration: 43,
+    reciterAudioUrl: '/audio/quran_ash_sharh.mp3',
+  },
+  {
+    id: 'ayat_al_kursi_full',
+    surahNumber: 2,
+    surahName: 'آية الكرسي (كاملة)',
+    ayahNumber: 255,
+    textUthmani: 'اللَّهُ لَا إِلَٰهَ إِلَّا هُوَ الْحَيُّ الْقَيُّومُ ۚ لَا تَأْخُذُهُ سِنَةٌ وَلَا نَوْمٌ ۚ لَّهُ مَا فِي السَّمَاوَاتِ وَمَا فِي الْأَرْضِ ۗ مَن ذَا الَّذِي يَشْفَعُ عِندَهُ إِلَّا بِإِذْنِهِ ۚ يَعْلَمُ مَا بَيْنَ أَيْدِيهِمْ وَمَا خَلْفَهُمْ ۖ وَلَا يُحِيطُونَ بِشَيْءٍ مِّنْ عِلْمِهِ إِلَّا بِمَا شَاءَ ۚ وَسِعَ كُرْسِيُّهُ السَّمَاوَاتِ وَالْأَرْضَ ۖ وَلَا يَئُودُهُ حِفْظُهُمَا ۚ وَهُوَ الْعَلِيُّ الْعَظِيمُ',
+    translationOrTafseer: 'أعظم آية في كتاب الله كاملة بصوت خاشع مهيب',
+    reciterName: 'الشيخ مشاري راشد العفاسي',
+    themeTag: 'آية الكرسي كاملة',
+    recommendedDuration: 52,
+    reciterAudioUrl: '/audio/quran_ayat_kursi.mp3',
+  },
+  {
+    id: 'surah_al_fatiha_full',
+    surahNumber: 1,
+    surahName: 'سورة الفاتحة (كاملة)',
+    ayahRange: 'الآيات ١ - ٧',
+    textUthmani: 'بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ ۝ الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ ۝ الرَّحْمَٰنِ الرَّحِيمِ ۝ مَالِكِ يَوْمِ الدِّينِ ۝ إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ ۝ اهْدِنَا الصِّرَاطَ الْمُسْتَقِيمَ ۝ صِرَاطَ الَّذِينَ أَنْعَمْتَ عَلَيْهِمْ غَيْرِ الْمَغْضُوبِ عَلَيْهِمْ وَلَا الضَّالِّينَ',
+    translationOrTafseer: 'أم الكتاب والسبع المثاني كاملة بتجويد تقشعر له الأبدان',
+    reciterName: 'الشيخ عبد الباسط عبد الصمد',
+    themeTag: 'سورة الفاتحة كاملة',
+    recommendedDuration: 42,
+    reciterAudioUrl: '/audio/quran_al_fatiha.mp3',
+  },
+  {
+    id: 'surah_al_ikhlas_full',
+    surahNumber: 112,
+    surahName: 'سورة الإخلاص (كاملة)',
+    ayahRange: 'الآيات ١ - ٤',
+    textUthmani: 'قُلْ هُوَ اللَّهُ أَحَدٌ ۝ اللَّهُ الصَّمَدُ ۝ لَمْ يَلِدْ وَلَمْ يُولَدْ ۝ وَلَمْ يَكُن لَّهُ كُفُوًا أَحَدٌ',
+    translationOrTafseer: 'تعدل ثلث القرآن كاملة بصوت عذب يبعث الطمأنينة',
+    reciterName: 'الشيخ مشاري راشد العفاسي',
+    themeTag: 'سورة الإخلاص كاملة',
+    recommendedDuration: 22,
+    reciterAudioUrl: '/audio/quran_al_ikhlas.mp3',
+  },
+  {
+    id: 'surah_al_qadr_full',
+    surahNumber: 97,
+    surahName: 'سورة القدر (كاملة)',
+    ayahRange: 'الآيات ١ - ٥',
+    textUthmani: 'إِنَّا أَنزَلْنَاهُ فِي لَيْلَةِ الْقَدْرِ ۝ وَمَا أَدْرَاكَ مَا لَيْلَةُ الْقَدْرِ ۝ لَيْلَةُ الْقَدْرِ خَيْرٌ مِّنْ أَلْفِ شَهْرٍ ۝ تَنَزَّلُ الْمَلَائِكَةُ وَالرُّوحُ فِيهَا بِإِذْنِ رَبِّهِم مِّن كُلِّ أَمْرٍ ۝ سَلَامٌ هِيَ حَتَّىٰ مَطْلَعِ الْفَجْرِ',
+    translationOrTafseer: 'سورة القدر كاملة: سلام وبركة حتى مطلع الفجر',
+    reciterName: 'الشيخ مشاري راشد العفاسي',
+    themeTag: 'سورة القدر كاملة',
+    recommendedDuration: 45,
+    reciterAudioUrl: '/audio/quran_al_qadr.mp3',
+  },
+  {
+    id: 'surah_ad_duha_full',
+    surahNumber: 93,
+    surahName: 'سورة الضحى (كاملة)',
+    ayahRange: 'الآيات ١ - ١١',
+    textUthmani: 'وَالضُّحَىٰ ۝ وَاللَّيْلِ إِذَا سَجَىٰ ۝ مَا وَدَّعَكَ رَبُّكَ وَمَا قَلَىٰ ۝ وَلَلْآخِرَةُ خَيْرٌ لَّكَ مِنَ الْأُولَىٰ ۝ وَلَسَوْفَ يُعْطِيكَ رَبُّكَ فَتَرْضَىٰ ۝ أَلَمْ يَجِدْكَ يَتِيمًا فَآوَىٰ ۝ وَوَجَدَكَ ضَالًّا فَهَدَىٰ ۝ وَوَجَدَكَ عَائِلًا فَأَغْنَىٰ ۝ فَأَمَّا الْيَتِيمَ فَلَا تَقْهَرْ ۝ وَأَمَّا السَّائِلَ فَلَا تَنْهَرْ ۝ وَأَمَّا بِنِعْمَةِ رَبِّكَ فَحَدِّثْ',
+    translationOrTafseer: 'جبر الخواطر والرحمة والرضا الإلهي العظيم كاملة',
+    reciterName: 'الشيخ مشاري راشد العفاسي',
+    themeTag: 'سورة الضحى كاملة',
+    recommendedDuration: 65,
+    reciterAudioUrl: '/audio/quran_ad_duha.mp3',
+  },
+  {
+    id: 'surah_al_kawthar_full',
+    surahNumber: 108,
+    surahName: 'سورة الكوثر (كاملة)',
+    ayahRange: 'الآيات ١ - ٣',
+    textUthmani: 'إِنَّا أَعْطَيْنَاكَ الْكَوْثَرَ ۝ فَصَلِّ لِرَبِّكَ وَانْحَرْ ۝ إِنَّ شَانِئَكَ هُوَ الْأَبْتَرُ',
+    translationOrTafseer: 'البشارة بالخير الكثير والنعيم المقيم',
+    reciterName: 'الشيخ مشاري راشد العفاسي',
+    themeTag: 'سورة الكوثر كاملة',
+    recommendedDuration: 25,
+    reciterAudioUrl: '/audio/quran_al_kawthar.mp3',
+  },
+];
+
+export const QURAN_AUDIO_OPTIONS: AudioTrack[] = [
+  {
+    id: 'quran_ash_sharh_full',
+    title: 'سورة الشرح كاملة (مشاري العفاسي)',
+    artist: 'مشاري العفاسي',
+    type: 'quran_audio',
+    audioUrl: '/audio/quran_ash_sharh.mp3',
+  },
+  {
+    id: 'quran_ayat_kursi_full',
+    title: 'آية الكرسي كاملة (مشاري العفاسي)',
+    artist: 'مشاري العفاسي',
+    type: 'quran_audio',
+    audioUrl: '/audio/quran_ayat_kursi.mp3',
+  },
+  {
+    id: 'quran_fatiha_abdulsamad',
+    title: 'سورة الفاتحة كاملة (عبد الباسط عبد الصمد)',
+    artist: 'عبد الباسط عبد الصمد',
+    type: 'quran_audio',
+    audioUrl: '/audio/quran_al_fatiha.mp3',
+  },
+  {
+    id: 'quran_duha_alafasy',
+    title: 'سورة الضحى كاملة (مشاري العفاسي)',
+    artist: 'مشاري العفاسي',
+    type: 'quran_audio',
+    audioUrl: '/audio/quran_ad_duha.mp3',
+  },
+  {
+    id: 'quran_qadr_alafasy',
+    title: 'سورة القدر كاملة (مشاري العفاسي)',
+    artist: 'مشاري العفاسي',
+    type: 'quran_audio',
+    audioUrl: '/audio/quran_al_qadr.mp3',
+  },
+  {
+    id: 'quran_ikhlas_alafasy',
+    title: 'سورة الإخلاص كاملة (مشاري العفاسي)',
+    artist: 'مشاري العفاسي',
+    type: 'quran_audio',
+    audioUrl: '/audio/quran_al_ikhlas.mp3',
+  },
+  {
+    id: 'quran_kawthar_alafasy',
+    title: 'سورة الكوثر كاملة (مشاري العفاسي)',
+    artist: 'مشاري العفاسي',
+    type: 'quran_audio',
+    audioUrl: '/audio/quran_al_kawthar.mp3',
+  },
+  {
+    id: 'quran_rain_ambience',
+    title: 'سكينة تلاوة القرآن مع رذاذ المطر الهادئ',
+    artist: 'استوديو السكينة',
+    type: 'synth_nature',
+    synthStyle: 'rain',
+  },
+];

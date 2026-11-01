@@ -1,0 +1,6 @@
+{
+  "name": "استوديو الفيديوهات الرومانسية والقرآن الكريم",
+  "description": "صانع فيديوهات رومانسية وقرآنية احترافية مع أغانٍ وتلاوات ومؤثرات سينمائية ومشاركة اجتماعية وتحميل مباشر للهاتف.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
